@@ -40,8 +40,9 @@ const getSuperHero = () => {
     });
 };
 
-const getSuperHeroSearch = (name) => {
-    
+const getSuperHeroSearch = (str) => {
+  let name = str.charAt(0).toUpperCase() + str.slice(1);
+  console.log(name);
   fetch(`https://superheroapi.com/api.php/10223569763528853/search/${name}`)
     .then((response) => response.json())
     .then((json) => {
