@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperHero API Search - Character</title>
+    
+    <link rel="shortcut icon" href="./assets/superhero-35e02662.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/index-72eb787f.css">
+  </head>
+  <body class="bg-gray-900 text-white">
+    <div class="container flex flex-col items-center mb-10">
+      <div class="user flex flex-col justify-between items-center">
+        <button
+          class="btn w-40 py-3"
+          id="getRandomHero"
+          onclick="getSuperHero();"
+        >
+          Get Random Hero
+        </button>
+        <div class="search flex justify-between items-center space-x-5">
+          <input
+            type="text"
+            placeholder="Search a hero name..."
+            class="bg-sky-800 h-8 p-2 rounded-md focus:outline-0 focus:ring-1 focus:ring-gray-600"
+            id="searchInput"
+          />
+          <button
+            class="btn w-18 py-2"
+            id="search"
+            onclick="getSuperHeroSearch(searchInputDiv.value);
+          "
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <hr>
+      <div class="row flex flex-col ml-30">
+        <div class="flex flex-col justify-start w-full flex-wrap space-y-5" id="heroDescription"> 
+        </div>
+      </div>
+    <script src="index.js"></script>
+  </body>
+</html>
